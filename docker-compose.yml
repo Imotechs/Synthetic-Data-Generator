@@ -1,0 +1,54 @@
+version: '3.3'
+
+services:
+  db:
+    image: postgres:15
+    container_name: postgres-db
+    restart: always
+    environment:
+      POSTGRES_DB: intellidata
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: password123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  backend:
+    build:
+      context: .
+    container_name: django-backend
+    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/code
+    environment:
+      - DB_NAME=intellidata
+      - DB_USER=myuser
+      - DB_PASSWORD=password123
+      - DB_HOST=db
+      - DB_PORT=5432
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: .
+    container_name: streamlit-frontend
+    command: streamlit run code/ui/main.py --server.port=8501 --server.address=0.0.0.0
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/code
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+
+
+
+
+
+#409143175695-compute@developer.gserviceaccount.com

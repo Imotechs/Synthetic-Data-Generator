@@ -1,0 +1,9 @@
+.git/
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.sqlite3
+.env
+static/ # If you collect static locally for dev, don't copy them into the Docker image twice
+media/
