@@ -29,4 +29,3 @@ CMD ["bash"]
 #CMD ["streamlit", "code/ui/main.py"]
 #CMD ['python', 'manage.py runserver']
 
-# us-docker.pkg.dev/quick-pointer-464919-m2/intelli-app/intelli-image:latest .

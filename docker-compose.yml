@@ -48,7 +48,56 @@ volumes:
   postgres_data:
 
 
+# ext :34.41.21.180
+# int: 10.128.0.5 
+
+# sudo nano /etc/systmd/system/gunicorn.service
+
+# [Unit]
+# Description=gunicorn daemon for django
+# After=network.target
+
+# [Service]
+# User=admin
+# Group=www-data
+# WorkingDirectory=/home/admin/intellidata
+# Environment="PATH=/home/admin/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+# ExecStart=/home/admin/venv/bin/gunicorn \
+#     --access-logfile - \
+#     --workers 3 \
+#     --bind unix:/run/gunicorn.sock \
+#     intellidata.wsgi:application
+
+# [Install]
+# WantedBy=multi-user.target
+
+# sudo systemctl daemon-reload
+# sudo systemctl start gunicorn
+# sudo systemctl enable gunicorn
+# sudo systemctl status gunicorn
+
+# sudo nano /etc/nginx/sites-available/intellidata
+# server {
+#     listen 80;
+#     server_name 34.41.21.180;
+
+#     # Path to your project static files
+#     location /static/ {
+#         alias /home/tobiabubakar98/intellidata/static/;
+#     }
+
+#     # Path to your media files (optional, only if using media)
+#     location /media/ {
+#         alias /home/tobiabubakar98/intellidata/media/;
+#     }
+
+#     location / {
+#         include proxy_params;
+#         proxy_pass http://unix:/home/tobiabubakar98/intellidata/gunicorn.sock;
+#     }
+# }
 
 
+ 
 
-#409143175695-compute@developer.gserviceaccount.com
+#  gcloud compute instances describe instance-20250705-210129 --zone=us-central1-c --format="get(disks[0].deviceName)"

@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 import io
 
-base_url ="http://backend:8000"
+base_url ="http://34.41.21.180"
 def run():
     # ========================
     # File Upload

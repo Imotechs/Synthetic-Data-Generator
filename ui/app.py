@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import requests
 import io
+base_url ="http://34.41.21.180"
 
 
 def run():
@@ -134,7 +135,7 @@ def run():
                 }
 
                 try:
-                    response = requests.post("http://localhost:8000/api/generate/smart/", files=files, data=data)
+                    response = requests.post(f"{base_url}/api/generate/smart/", files=files, data=data)
                     if response.status_code == 200:
                         file_url = response.json().get("file")
                         st.success("✅ Synthetic data generated successfully!")
@@ -227,7 +228,7 @@ def run():
                             }
 
                             # Step 3: Send request to backend
-                            response = requests.post("http://localhost:8000/api/generate/smart/", files=files, data=data)
+                            response = requests.post(f"{base_url}/api/generate/smart/", files=files, data=data)
 
                             # Step 4: Handle response
                             if response.status_code == 200:
