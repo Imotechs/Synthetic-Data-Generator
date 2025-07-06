@@ -9,11 +9,11 @@ def run():
     # ========================
     # File Upload
     # ========================
-    st.subheader("📤 Upload Your Dataset")
+    st.subheader("📤 Test Data App")
     uploaded_file = st.file_uploader(
         "Choose your file (CSV, Excel, or TSV)",
         type=["csv", "xlsx", "xls", "tsv"],
-        help="This should be a clean dataset with headers.",
+        help="This should be a clean,1-sheet file dataset with headers.",
         key='test_uploader'
     )
 
@@ -204,8 +204,8 @@ def run():
             output_format = st.selectbox("File format", ["csv", "xlsx", "tsv"])
          
             # Generate synthetic data
-            if st.button("🚀 Generate Data"):
-        
+            if st.button("⚙️ Get Data"):
+
                 with st.spinner("🔄 Generating data ..."):
                     if not st.session_state.custom_columns:
                         st.error("Please add at least one column.")

@@ -78,4 +78,4 @@ else:
 # Footer
 # ========================
 st.divider()
-st.caption("Built with by Team [Co-Creators] for the GenAI Hackathon 2025")
+st.caption("👨‍💻Data is life, and we handle it with pleasure!")

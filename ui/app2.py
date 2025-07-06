@@ -13,7 +13,7 @@ def run():
     real_uploaded_file = st.file_uploader(
         "Choose your file (CSV, Excel, or TSV)",
         type=["csv", "xlsx", "xls", "tsv"],
-        help="This should be a clean dataset with headers.",
+        help="This should be a clean,1-sheet file dataset with headers.",
         key='real_uploader'
     )
 
@@ -72,7 +72,7 @@ def run():
         # ========================
         # Generate Button
         # ========================
-        if st.button("⚙️ Generate "):
+        if st.button("⚙️ Get Data "):
             with st.spinner("🔄 Generating synthetic data..."):
                 # Convert modified DataFrame to file-like object
                 output = io.BytesIO()
