@@ -5,7 +5,8 @@ An AI-powered tool that fills missing data and generates high-quality synthetic 
 
 ## Live Demo
 
-👉 [https://yourapp-link.amazonaws.com](https://yourapp-link.amazonaws.com)
+👉 [https://intellidata.streamlit.app](https://intellidata.streamlit.app)
+👉 [https://youtu.be/91LI12Mwm3I?si=Ew1A5iwOIEn2bXx9]( Youtube Demo )
 
 > You can upload a CSV, tsv, xlsx, xls file and generate enhanced data instantly.
 
@@ -34,7 +35,7 @@ Businesses often deal with incomplete customer datasets. Missing fields reduce t
 
 ## 🧪 Testing Instructions
 
-1. Open the app: [https://yourapp-link.amazonaws.com](https://yourapp-link.amazonaws.com)
+1. Open the app: [https://intellidata.streamlit.app](App Link)
 2. Upload a customer data file (CSV, XLSX, or TSV)  
    > Sample file provided: [`csv_sample.csv`](./samples/csv_sample.csv), [`Xlsx_sample.xlsx`](./samples/xlsx_sample.xlsx), [`tsv_sample.tsv`](./samples/tsv_sample.tsv) 
 3. Choose a generation model from the sidebar [TestData, RealData]
