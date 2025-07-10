@@ -9,7 +9,7 @@ main_logo = Image.open("ui/assets/images/logo-bg.png")
 # Page Configuration
 # ========================
 st.set_page_config(
-    page_title="Smart Synthetic Data Generator",
+    page_title="IntelliData Generatr",
     page_icon="🧠",
     layout="centered",
     initial_sidebar_state="expanded"
@@ -45,8 +45,8 @@ with st.sidebar:
     st.markdown("---")
     st.header("🛠️ App Controls")
     st.markdown("Upload your dataset and fill up the missing gaps with our AI solution, also generate synthetic rows intelligently.")
-    st.markdown("👨‍💻 Built for GenAI Hackathon 2025")
-    st.markdown("[GitHub Repo](https://github.com/Imotechs/intellidata.git) • [Live Demo](https://youtu.be/CwKMUgTH5Ts)")
+    st.markdown("👨‍💻Built for GenAI Hackathon 2025")
+    st.markdown("[GitHub : ](https://github.com/Imotechs/intellidata.git) • [Live Demo](https://youtu.be/CwKMUgTH5Ts)")
 
 # ========================
 # Main Content Area

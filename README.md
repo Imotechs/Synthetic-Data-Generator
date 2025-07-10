@@ -6,7 +6,7 @@ An AI-powered tool that fills missing data and generates high-quality synthetic 
 ## Live Demo
 
 👉 [https://intellidata.streamlit.app](https://intellidata.streamlit.app)
-👉 [https://youtu.be/91LI12Mwm3I?si=Ew1A5iwOIEn2bXx9]( Youtube Demo )
+👉 [https://youtu.be/CwKMUgTH5Ts]( Youtube Demo )
 
 > You can upload a CSV, tsv, xlsx, xls file and generate enhanced data instantly.
 
