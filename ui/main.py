@@ -46,7 +46,7 @@ with st.sidebar:
     st.header("🛠️ App Controls")
     st.markdown("Upload your dataset and fill up the missing gaps with our AI solution, also generate synthetic rows intelligently.")
     st.markdown("👨‍💻 Built for GenAI Hackathon 2025")
-    st.markdown("[GitHub Repo](https://github.com/Imotechs/Synthetic-Data-Generator.git) • [Live Demo](https://youtu.be/91LI12Mwm3I)")
+    st.markdown("[GitHub Repo](https://github.com/Imotechs/intellidata.git) • [Live Demo](https://youtu.be/CwKMUgTH5Ts)")
 
 # ========================
 # Main Content Area
